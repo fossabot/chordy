@@ -1,14 +1,10 @@
 ---
 layout: page
 title:
-tagline: 
+tagline: A Ruby DSL for printing guitar chord diagrams
 ---
 {% include JB/setup %}
 
-# chordy
-A Ruby DSL for printing guitar chord diagrams.
-
-<hr>
 
 <b> This site is still under construction. </b>
 
