@@ -5,6 +5,7 @@ description: ""
 ---
 {% include JB/setup %}
 
+## Introduction
 A chord is an abstraction of a part of a tune or a riff.
 A song or a tune comprises of several chords played in varying rhythm.
 In chordy, chords can be created using the <code>play</code> function.
