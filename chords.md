@@ -5,7 +5,7 @@ description: ""
 ---
 {% include JB/setup %}
 
-### Introduction
+### Basics
 A chord is an abstraction of a part of a tune or a riff.
 A song or a tune comprises of several chords played in varying rhythm.
 In chordy, chords can be created using the <code>play</code> function.
@@ -39,6 +39,7 @@ Note that the string and symbol representations can be in lowercase as well.
     <tr>
       <td>C</td><td>C</td><td>:C, :c, "C", "c"</td>
     </tr>
+
     <tr>
       <td>C#, Db</td><td>CSharp, DFlat</td><td>:C!, :c!, :D_, :d_, "C!", "c!", "D_", "d_"</td>
     </tr>
@@ -46,6 +47,7 @@ Note that the string and symbol representations can be in lowercase as well.
     <tr>
       <td>D</td><td>C</td><td>:D, :d, "D", "d"</td>
     </tr>
+
     <tr>
       <td>D#, Eb</td><td>DSharp, EFlat</td><td>:D!, :d!, :E_, :e_, "D!", "d!", "E_", "e_"</td>
     </tr>
@@ -57,6 +59,7 @@ Note that the string and symbol representations can be in lowercase as well.
     <tr>
       <td>F</td><td>F</td><td>:F, :f, "F", "f"</td>
     </tr>
+
     <tr>
       <td>F#, Gb</td><td>FSharp, GFlat</td><td>:F!, :f!, :G_, :g_, "F!", "f!", "G_", "g_"</td>
     </tr>
@@ -64,6 +67,7 @@ Note that the string and symbol representations can be in lowercase as well.
     <tr>
       <td>G</td><td>G</td><td>:G, :g, "G", "g"</td>
     </tr>
+
     <tr>
       <td>G#, Ab</td><td>GSharp, AFlat</td><td>:G!, :g!, :A_, :a_, "G!", "g!", "A_", "a_"</td>
     </tr>
@@ -71,6 +75,7 @@ Note that the string and symbol representations can be in lowercase as well.
     <tr>
       <td>A</td><td>A</td><td>:A, :a, "A", "a"</td>
     </tr>
+
     <tr>
       <td>A#, Bb</td><td>ASharp, BFlat</td><td>:A!, :a!, :B_, :b_, "A!", "a!", "B_", "b_"</td>
     </tr>
