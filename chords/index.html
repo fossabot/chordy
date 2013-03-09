@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>chords - chordy</title>
+  <meta name="author" content="Akhil Wali">
+
+  
+  <meta name="description" content="Chords Basics A chord is an abstraction of a part of a tune or a riff.
+A song or a tune comprises of several chords played in varying rhythm.
+In &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://darth10.github.com/chordy/chords/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="chordy" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">chordy</a></h1>
+  
+    <h2>A Ruby DSL for printing guitar tabs</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation">
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:darth10.github.com/chordy" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+
+<ul class="main-navigation">
+  <li><a href="/">Getting Started</a></li>
+  <li><a href="/">Documentation</a></li>
+  <li><a href="http://rubygems.org/gems/chordy">On RubyGems</a></li>
+  <li><a href="http://github.com/darth10/chordy">On GitHub</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Chords</h1>
+    
+  </header>
+  
+  <h3>Basics</h3>
+
+<p>A chord is an abstraction of a part of a tune or a riff.
+A song or a tune comprises of several chords played in varying rhythm.
+In chordy, chords can be created using the <code>play</code> function.</p>
+
+<p>There are several broad ways to represent a chord.
+A chord can be represented as an array of numbers, where the numbers represent the fret positions of different strings in the chord.
+<code>play</code> understands this notation, and you can specify a chord to be played using an array of integers.
+In chordy, <code>-1</code> denotes a string that is not played, and an open chord is <code>0</code>.
+Other numbers denote the fret position of the string in the chord.</p>
+
+<script src="https://gist.github.com/darth10/4967644.js?file=chords_with_array.rb"><!-- Gist  --></script>
+
+
+<p>Alternatively, a chord can be specified by it&#8217;s chord family and type.
+The <code>play</code> function takes one required arugment, which can be a chord family like <i>C</i> or <i>F#</i>.
+There are a handful of notations to specify a chord family. For example, the <i>C</i> chord family can be represented as <code>C</code>, <code>:C</code> or <code>"C"</code>.
+Similarly, <i>F#</i> is <code>FSharp</code>, <code>:F!</code> or <code>"F!"</code>. A <code>!</code> suffix denotes a sharp, and <code>_</code> denotes a flat.
+Note that the string and symbol representations can be in lowercase as well.</p>
+
+<script src="https://gist.github.com/darth10/4967644.js?file=chords_with_family_type.rb"><!-- Gist  --></script>
+
+
+<h3>Supported chord families</h3>
+
+<table class="chord_families_and_types" style="background:#CCC;">
+  <thead>
+    <tr>
+      <th>Chordy family</th><th>Class name</th><th>Representations</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>C</td><td>C</td><td>:C, :c, &#8220;C&#8221;, &#8220;c&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>C#, Db</td><td>CSharp, DFlat</td><td>:C!, :c!, :D_, :d_, &#8220;C!&#8221;, &#8220;c!&#8221;, &#8220;D_&#8221;, &#8220;d_&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>D</td><td>C</td><td>:D, :d, &#8220;D&#8221;, &#8220;d&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>D#, Eb</td><td>DSharp, EFlat</td><td>:D!, :d!, :E_, :e_, &#8220;D!&#8221;, &#8220;d!&#8221;, &#8220;E_&#8221;, &#8220;e_&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>E</td><td>E</td><td>:E, :e, &#8220;E&#8221;, &#8220;e&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>F</td><td>F</td><td>:F, :f, &#8220;F&#8221;, &#8220;f&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>F#, Gb</td><td>FSharp, GFlat</td><td>:F!, :f!, :G_, :g_, &#8220;F!&#8221;, &#8220;f!&#8221;, &#8220;G_&#8221;, &#8220;g_&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>G</td><td>G</td><td>:G, :g, &#8220;G&#8221;, &#8220;g&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>G#, Ab</td><td>GSharp, AFlat</td><td>:G!, :g!, :A_, :a_, &#8220;G!&#8221;, &#8220;g!&#8221;, &#8220;A_&#8221;, &#8220;a_&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>A</td><td>A</td><td>:A, :a, &#8220;A&#8221;, &#8220;a&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>A#, Bb</td><td>ASharp, BFlat</td><td>:A!, :a!, :B_, :b_, &#8220;A!&#8221;, &#8220;a!&#8221;, &#8220;B_&#8221;, &#8220;b_&#8221;</td>
+    </tr>
+
+    <tr>
+      <td>B</td><td>B</td><td>:B, :b, &#8220;B&#8221;, &#8220;b&#8221;</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3>Supported chord types</h3>
+
+<table class="chord_families_and_types" style="background:#CCC;">
+  <thead>
+    <tr>
+      <th>Chord type</th><th>Canonical representation</th><th>Representations</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Major chord</td><td></td><td>:M, :major</td>
+    </tr>
+
+    <tr>
+      <td>Minor chord</td><td>m</td><td>:m, :minor</td>
+    </tr>
+
+    <tr>
+      <td>Dominant seventh chord</td><td>7</td><td>:_7, :dominant_7</td>
+    </tr>
+
+    <tr>
+      <td>Augmented triad chord</td><td>+5</td><td>:aug5, :augmented_5</td>
+    </tr>
+
+    <tr>
+      <td>Diminished triad chord</td><td>m-5</td><td>:m5,:dim5, :diminished_5</td>
+    </tr>
+
+    <tr>
+      <td>Major sixth chord</td><td>6</td><td>:M6, :major_6</td>
+    </tr>
+
+    <tr>
+      <td>Minor sixth chord</td><td>m6</td><td>:m6, :minor_6</td>
+    </tr>
+
+    <tr>
+      <td>Suspended fourth chord</td><td>sus</td><td>:sus, :sus4, :suspended_4</td>
+    </tr>
+
+    <tr>
+      <td>Suspended seventh chord</td><td>sus7</td><td>:sus7, :suspended_7</td>
+    </tr>
+
+    <tr>
+      <td>Major seventh chord</td><td>maj7</td><td>:M7, :major_7</td>
+    </tr>
+
+    <tr>
+      <td>Augmented seventh chord</td><td>7+5</td><td>:aug7, :augmented_7</td>
+    </tr>
+
+    <tr>
+      <td>Dominant seven-five chord</td><td>7-5</td><td>:_7_5, :dominant_7_5</td>
+    </tr>
+
+    <tr>
+      <td>Minor major seventh chord</td><td>m+7</td><td>:mM7, :minor_major_7</td>
+    </tr>
+
+    <tr>
+      <td>Minor seventh chord</td><td>m7</td><td>:m7, :minor_7</td>
+    </tr>
+
+    <tr>
+      <td>Augmented major seventh chord</td><td>+7+5</td><td>:aug7_5, :augmented_major_7</td>
+    </tr>
+
+    <tr>
+      <td>Half-diminished seventh chord</td><td>m7-5</td><td>:m7_5, :half_diminished_7</td>
+    </tr>
+
+    <tr>
+      <td>Diminished seventh chord</td><td>dim</td><td>:dim, :dim7, :diminished_7</td>
+    </tr>
+
+    <tr>
+      <td>Major ninth chord</td><td>9</td><td>:M9, :major_9</td>
+    </tr>
+
+    <tr>
+      <td>Major diminished ninth chord</td><td>-9</td><td>:_9, :dim9, :major_9</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".chord_families_and_types").tablecloth({
+      theme: "default",
+      striped: true
+    });
+  });
+</script>
+
+
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Akhil Wali - <a href="/LICENSE">MIT License</a> -
+  <span class="credit">Powered by
+    <a href="http://octopress.org" target="_blank">Octopress</a> and
+    <a href="http://pages.github.com" target="_blank">GitHub Pages</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
