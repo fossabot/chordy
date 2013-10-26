@@ -2,6 +2,6 @@
 layout: page
 ---
 
-<b> This site is still under construction. </b>
+<b> This site is under construction. </b>
 
 <hr>
