@@ -9,4 +9,7 @@ Clone the gh-pages branch of chordy into a directory named <code>_deploy</code>.
 
 == Usage
 
-Generate the site using <code>rake generate</code>. Publish to github pages using <code>rake deploy</code>.
+Generate the site using <code>rake generate</code>.
+Run <code>jekyll serve</code> in the generated <code>public</code> directory to serve the site at <code>localhost:4000</code>.
+
+Publish to github pages using <code>rake deploy</code>.
