@@ -1,11 +1,12 @@
 = chordy octopress
 {<img src="https://secure.travis-ci.org/darth10/chordy.png?branch=octopress" />}[https://travis-ci.org/darth10/chordy]
 
-Octopress blog for chordy
+This is the source for the {chordy wiki}[http://darth10.github.io/chordy].
+Powered by {Octopress}[http://octopress.org] and {GitHub Pages}[http://pages.github.com].
 
 == Setup
 
-Clone the gh-pages branch of chordy into a directory named <code>_deploy</code>.
+Clone the gh-pages branch into a directory named <code>_deploy</code>.
 
 == Usage
 
