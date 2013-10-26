@@ -1,0 +1,12 @@
+= chordy octopress
+{<img src="https://secure.travis-ci.org/darth10/chordy.png?branch=octopress" />}[https://travis-ci.org/darth10/chordy]
+
+Octopress blog for chordy
+
+== Setup
+
+Clone the gh-pages branch of chordy into a directory named <code>_deploy</code>.
+
+== Usage
+
+Generate the site using <code>rake generate</code>. Publish to github pages using <code>rake deploy</code>.
